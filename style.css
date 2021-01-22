@@ -1,0 +1,271 @@
+
+/* AJUSTESDE DE ESTILO*/
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* CUERPO - FONDO - IMAGEN DE FONDO*/
+body{  
+    font-family:'Roboto' sans-serif;
+    background-color: black;
+    color:white;
+    font-size:16px;
+ }
+ /*Color de fondo*/
+a{
+    color:white;
+    text-decoration:none; 
+}
+
+ul{ 
+    list-style: none;
+}
+ /* Container*/
+.container{
+    width:90%;
+    margin: auto;
+}
+
+/*---------BOTON DE NAVEGACION PARA TELEFONO---------------------*/
+.menu-btn{
+    position: absolute;
+    cursor: pointer;
+    top: 15px;
+    right: 30px;
+    display: none;
+    z-index:2;
+    font-size:  1.5rem;
+}
+
+/*---------------------------------------------------*/
+ /*Navegacion*/
+label.logo{
+    color:white;
+    font-size:35px;
+    line-height:80px;
+    padding:0 100px;
+    font-weight:bold;
+}
+.nav-main{
+    font-size:20px;
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    height: 60px;
+    padding: 20px 0;
+}
+.nav-brand{
+    width: 50px;
+}
+/*Navbar left*/
+.nav-main ul{
+    display: flex;
+}
+.nav-main ul li{
+    padding:10px;
+}
+.nav-main ul li a:hover {
+  border-bottom: 2px solid #fff;
+}
+.nav-main ul.nav-menu {
+    flex: 1;
+    margin-left: 20px;
+  }
+
+/*SHOWCASE -----------------------------------------------------------------------------------------------------------------*/
+hr{
+    margin:10px 0;
+}
+.showcase {
+    width: 100%;
+    height: 550px;
+    background: url("./img/imagen4.jpg") no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: flex-end;
+    padding: 50px;
+    margin-bottom: 20px;
+    color:black;
+   }
+/*BOTON DEL SHOWCASE*/
+.btn{
+    cursor:pointer;
+    display:inline-block;
+    border:0;
+    font-weight:bold;
+    padding:10px 20px;
+    background:#262626;
+    color:#ffffff;
+    font-size:15;
+    border:1px solid #fff;
+    margin:10px 0;
+}.btn:hover{
+    opacity: 0.8;
+}
+.showcase h2,
+.showcase p {
+    margin-bottom: 10px;
+}
+/*------------------------------------------------------------------------*/
+
+/*INFO CARDS*/
+.Infocards{
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr 1fr;
+    gap:25px;
+    margin:10 0px;
+}
+.Infocards img{
+    width: 100%;
+    height:180px;
+}
+.Infocards{
+    font-size:15px;
+    margin:10px 0;
+    text-align:center;
+}
+.Infocards a{
+    padding:1px;
+    color:white;
+    text-transform:uppercase;
+    display: inline-block;
+    font-weight:bold;
+}
+.Infocards a:hover{
+    text-decoration:underline;
+}
+
+/* CARDS BANNER ONE */
+.cards-banner-one {
+  width: 100%;
+  height: 350px;
+  background: url("./img/banner.jpg");
+  background-position:center;
+  margin-bottom: 40px;
+}
+
+.cards-banner-one .content{
+    width:100%;
+    padding:200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: flex-end;
+    padding-bottom: 50px;
+    margin-bottom: 20px;
+    color:black
+}
+/*SOCIAL*/
+.social{ /*Titulo*/
+    margin:50px;
+}
+.social p{
+    text-align:center;
+    font-size:30px;
+    margin-bottom:20px;
+}
+
+.links{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.links a{
+    margin:0 30px;
+}
+.links a i{
+    font-size: 3rem;
+
+}
+
+/*FOOTERS LINKS*/
+.footer-links{
+    background:#2f3640;
+    color:#616161;
+    font-size: 18px;
+    padding: 35px 0;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap: 10px;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.footer-container ul {
+  margin: 0 auto;
+}
+
+.footer{
+    background:#2f3640;
+    color: #616161;
+    font-size:16px;
+    padding:20px 0;
+    text-align:center;
+    padding-bottom:20px;
+}
+/*Responsibe-------------------------------------*/
+@media (max-width: 700px) {
+    .nav-main ul.nav-menu{
+        display:block;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        background:rgb(19, 19, 20);
+        height:100%;
+        padding:30px;
+        opacity: .9;
+        transform: translateX(-400px);
+        transition:transform.5s ease-in-out;
+    }
+
+    /*ANIMACION DE BARRA MODO CELULAR*/
+    .menu-btn{
+        display: block;
+    }
+
+
+
+    .nav-main ul.nav-menu.show{
+        transform:translateX(-20px);
+    }
+
+    /*-------------------------------------*/
+    .nav-main ul.nav-main-right { 
+        margin-right: 50px;
+      }
+      .Infocards{
+        grid-template-columns: repeat(2 , 1fr);
+    }
+    .cards-banner-one .content {
+    width: 100%;
+    padding: 2px 20px;
+  }
+  .cards-banner-one .content h2{
+      text-align: center;
+      padding:50px;
+  }
+} 
+
+@media (max-width: 500px) {
+    .Infocards{grid-template-columns: 1fr
+    }
+    }
+    .Infocards img{
+    height:250px;
+    }
+    .cards-banner-one .content{
+        width:100%;
+        padding: 60px 20px;
+    }
+
+
+
